@@ -28,13 +28,8 @@ rm -rf %{buildroot}
 
 # install service
 %__mkdir_p %{buildroot}/%{TZ_SYS_RO_SHARE}/X11/xkb
-%if "%{?tizen_target_name}" == "hawkp"
-%__cp -f xkb/tizen_key_layout_hawkp.txt %{buildroot}/%{TZ_SYS_RO_SHARE}/X11/xkb/tizen_key_layout.txt
-%__cp -f xkb/xkb_hawkp.rule %{buildroot}/%{TZ_SYS_RO_SHARE}/X11/xkb/xkb.rule
-%else
 %__cp -f xkb/tizen_key_layout.txt %{buildroot}/%{TZ_SYS_RO_SHARE}/X11/xkb/tizen_key_layout.txt
 %__cp -f xkb/xkb.rule %{buildroot}/%{TZ_SYS_RO_SHARE}/X11/xkb/xkb.rule
-%endif
 
 # for license notification
 mkdir -p %{buildroot}/%{TZ_SYS_RO_SHARE}/license
