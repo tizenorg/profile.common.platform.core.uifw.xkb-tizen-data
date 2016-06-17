@@ -3,3 +3,5 @@ model=pc105
 layout=us
 variant=
 options=
+
+supported_layouts=us,ru
